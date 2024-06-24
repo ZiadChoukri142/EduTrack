@@ -1,5 +1,3 @@
-
-
 .terminal-window {
     background-color: #1e1e1e;
     border: 1px solid #555;
@@ -61,13 +59,14 @@
 .command-line {
     display: flex;
     align-items: center;
-    padding: 10px;
+    padding-top: 14px;
+    padding-left: 15px;
     border-top: 1px solid #555;
 }
 
 .prompt {
     color: #55a7ff;
-    margin-right: 10px;
+    font-size: 25px;
 }
 
 .input-line {

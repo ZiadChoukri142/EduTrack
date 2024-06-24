@@ -6,16 +6,16 @@
     box-sizing: border-box;
     font-family: "VT323", monospace;
     color: white;
+    font-weight: 200;
+    text-decoration: none;
 }
 
-.title2 {
-    margin-top: 150px;
-    margin-bottom: 50px;
-    color: #b5e853;
-    font-size: 50px;
-    letter-spacing: 2px;
-    width: 100%;
-    text-align: center;
+.main-container {
+    margin: 0;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 body {
@@ -38,7 +38,7 @@ body {
 
 .navbar a {
     position: relative;
-    font-size: 24px;
+    font-size: 29px;
     color: rgb(181, 232, 83);
     font-weight: 500;
     text-decoration: none;
@@ -60,6 +60,16 @@ body {
     width: 100%;
 }
 
+.logo {
+    font-size: 50px;
+    font-weight: 300;
+    padding: 15px;
+    background: #FFFFFF;
+    background: linear-gradient(to right, #FFFFFF 0%, #B5E853 75%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 .mainsec{
     display: flex;
     justify-content: center;
@@ -75,8 +85,8 @@ body {
     font-size: 22px;
     border: #b5e853 3px solid;
     text-align: center;
-    padding: 10px 20px;
-    margin: 10px;
+    padding: 10px;
+    margin: 20px 30px;
     cursor: pointer;
     border-radius: 10px;
 }
@@ -86,11 +96,6 @@ body {
     align-items: center;
     
 }
-
-
-
-
-
 
 /* Global */
 .line-1{
@@ -103,8 +108,8 @@ body {
 
 /* Animation */
 .anim-typewriter{
-  animation: typewriter 1s steps(44) 1s 1 normal both,
-             blinkTextCursor 500ms steps(44) infinite normal;
+  animation: typewriter 1s steps(16) 1s 1 normal both,
+             blinkTextCursor 1s steps(16) infinite normal;
 }
 @keyframes typewriter{
   from{width: 0;}
