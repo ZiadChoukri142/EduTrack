@@ -26,7 +26,6 @@ body {
     z-index: 100;
 }
 
-
 .navbar a {
     position: relative;
     font-size: 24px;
@@ -49,4 +48,59 @@ body {
 
 .navbar a:hover::before {
     width: 100%;
+}
+
+.mainsec{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    padding: 10px;
+    flex-direction: column;
+}
+.mainsec h1 {
+    font-size: 50px;
+}
+.mainsec p {
+    font-size: 22px;
+    border: #b5e853 3px solid;
+    text-align: center;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.mainsec div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+
+
+
+
+
+/* Global */
+.line-1{
+    margin: 0 auto;
+    border-right: 2px solid rgba(255,255,255,.75);
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+/* Animation */
+.anim-typewriter{
+  animation: typewriter 2s steps(44) 1s 1 normal both,
+             blinkTextCursor 500ms steps(44) infinite normal;
+}
+@keyframes typewriter{
+  from{width: 0;}
+  to{width: 20rem;}
+}
+@keyframes blinkTextCursor{
+  from{border-right-color: rgba(255,255,255,.75);}
+  to{border-right-color: transparent;}
 }
