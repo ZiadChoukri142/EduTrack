@@ -1,51 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../css/style.css">
-  <link rel="stylesheet" href="../css/terminal.css">
-  <link rel="icon" type="image/x-icon" href="../images/logo.ico">
-  <script defer src="../js/graph.js"></script>
-  <script defer src="../js/graph2.js"></script>
-  <script defer src="../js/terminal.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  
-  <title>EduTrack</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/terminal.css">
+    <link rel="stylesheet" href="../css/challenge.css">
+    <link rel="icon" type="image/x-icon" href="../images/logo.ico">
+    <script defer src="../js/terminal.js"></script>
+    <title>EduTrack</title>
 </head>
+
 <body>
+
     <header class="header">
-      <a href="../pages/index.html" class="logo"><img src="../images/logo.png" alt="kiwi" width="140" height="70" style="padding-top: 10px;"></a>
-      <nav class="navbar">
-        <a href="../pages/profile.html">Profile</a>
-        <a href="../pages/challenges.html">Challenges</a>
-        <a href="../pages/quests.html">Quests</a>
-        <a href="../pages/.html">Explore</a>
-      </nav>
+        <a href="index.html">
+            <h1 class="logo">EduTrack</h1>
+        </a>
+        <nav class="navbar">
+            <a href="profile.html">Profile</a>
+            <a href="challenges.html">Challenges</a>
+            <a href="quests.html">Quests</a>
+            <a href="explore.html">Explore</a>
+        </nav>
     </header>
-    <div class="container">
-      <div class="card">
-        <h1>
-          Friends
-        </h1>
-      </div>
-      <div class="card">
-        <h1>
-          Stats
-        </h1>
-      </div>
-      <div class="card">
-          <canvas id="myRadarChart" width="400" height="400"></canvas>
-      </div>
-      <div class="card">
-          <canvas id="myRadarChart2" width="400" height="400"></canvas>
-      </div>
+    <div>
+
     </div>
-
-    <footer>
-
-    </footer>
+    <div class="main-container">
+       <center><h1></h1></center> 
+        <div class="terminal-window">
+            <div class="terminal-screen" id="terminalScreen">
+                <p class="line-1 anim-typewriter" style="font-size: 30px; text-align: center;">Escape the matrix</p>
+                <br>
+            </div>
+            <div class="command-line">
+                <span class="prompt">user@linux:~$</span>
+                <input type="text" id="commandInput" class="input-line" autofocus>
+            </div>
+        </div>
+    </div>
 
 
 </body>
+
 </html>
