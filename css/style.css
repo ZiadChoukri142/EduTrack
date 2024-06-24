@@ -8,6 +8,16 @@
     color: white;
 }
 
+.title2 {
+    margin-top: 150px;
+    margin-bottom: 50px;
+    color: #b5e853;
+    font-size: 50px;
+    letter-spacing: 2px;
+    width: 100%;
+    text-align: center;
+}
+
 body {
     min-height: 100vh;
     background-color: #262626;
@@ -93,7 +103,7 @@ body {
 
 /* Animation */
 .anim-typewriter{
-  animation: typewriter 2s steps(44) 1s 1 normal both,
+  animation: typewriter 1s steps(44) 1s 1 normal both,
              blinkTextCursor 500ms steps(44) infinite normal;
 }
 @keyframes typewriter{
