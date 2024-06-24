@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/ChartSection.css">
+  <link rel="stylesheet" href="./css/terminal.css">
+  <script defer src="./js/graph.js"></script>
+  <script defer src="./js/terminal.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <title>Document</title>
+</head>
+<body>
+    <header class="header">
+      <a href="" class="logo"><img src="./images/logo.png" alt="kiwi" width="140" height="70"></a>
+      <nav class="navbar">
+        <a href="#">Profile</a>
+        <a href="#">Challenges</a>
+        <a href="#">Quests</a>
+        <a href="#">Explore</a>
+        <a href="#">About</a>
+      </nav>
+    </header>
+
+
+    <main>
+      <section class="graph">
+        <center><h1>Root user</h1></center>
+        <canvas id="myPieChart" width="400" height="400"></canvas>
+      </section>
+
+      <div class="terminal-window">
+        <div class="terminal-screen" id="terminalScreen">
+            <p>Welcome to Linux Terminal</p>
+            <p>WHAT is 2 + 2</p>
+        </div>
+        <div class="command-line">
+            <span class="prompt">user@linux:~$</span>
+            <input type="text" id="commandInput" class="input-line" autofocus>
+        </div>
+    </div>
+
+    </main>
+
+    <footer>
+
+    </footer>
+
+
+</body>
+</html>
