@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 
 * {
+    /* cursor: crosshair; */
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -10,17 +11,26 @@
     text-decoration: none;
 }
 
+.element {
+  width: 100%;
+  height: 100vh;
+  background-image: url('../images/bg.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
 .main-container {
     margin: 0;
     position: absolute;
-    top: 25%;
+    top: 17%;
     left: 50%;
     transform: translateX(-50%);
 }
 
 body {
     min-height: 100vh;
-    background-color: #262626;
 }
 
 .header {
@@ -56,9 +66,25 @@ body {
     transition: 0.5s;
 }
 
+.navbar section:hover::before {
+    width: 100%;
+}
+
+.navbar section::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #b5e853;
+    transition: 0.5s;
+}
+
 .navbar a:hover::before {
     width: 100%;
 }
+
 
 .logo {
     font-size: 50px;
@@ -70,7 +96,7 @@ body {
     -webkit-text-fill-color: transparent;
 }
 
-.mainsec{
+.mainsec {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -78,9 +104,11 @@ body {
     padding: 10px;
     flex-direction: column;
 }
+
 .mainsec h1 {
     font-size: 50px;
 }
+
 .mainsec p {
     font-size: 22px;
     border: #b5e853 3px solid;
@@ -90,36 +118,167 @@ body {
     cursor: pointer;
     border-radius: 10px;
 }
+
 .mainsec div {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
+
 }
 
-h1, h2 {
+.title h1 {
     color: white;
+    text-align: center;
+    font-size: 52px;
+}
+
+
+.items {
+    text-align: left;
+    padding: 10px;
 }
 
 /* Global */
-.line-1{
+.line-1 {
     margin: 0 auto;
-    border-right: 2px solid rgba(255,255,255,.75);
+    border-right: 2px solid rgba(255, 255, 255, .75);
     text-align: center;
     white-space: nowrap;
     overflow: hidden;
 }
 
 /* Animation */
-.anim-typewriter{
-  animation: typewriter 1s steps(16) 1s 1 normal both,
-             blinkTextCursor 1s steps(16) infinite normal;
+.anim-typewriter {
+    animation: typewriter 1s steps(16) 1s 1 normal both,
+        blinkTextCursor 1s steps(16) infinite normal;
 }
-@keyframes typewriter{
-  from{width: 0;}
-  to{width: 20rem;}
+
+@keyframes typewriter {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 20rem;
+    }
 }
-@keyframes blinkTextCursor{
-  from{border-right-color: rgba(255,255,255,.75);}
-  to{border-right-color: transparent;}
+
+@keyframes blinkTextCursor {
+    from {
+        border-right-color: rgba(255, 255, 255, .75);
+    }
+
+    to {
+        border-right-color: transparent;
+    }
 }
+
+/* Card */
+
+.card {
+    box-sizing: border-box;
+    width: 190px;
+    height: 250px;
+    background: rgba(217, 217, 217, 0.58);
+    border: 1px solid white;
+    box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
+    backdrop-filter: blur(6px);
+    border-radius: 17px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    font-weight: bolder;
+    color: black;
+}
+
+.card:hover {
+    border: 1px solid black;
+    transform: scale(1.05);
+}
+
+.card:active {
+    transform: scale(0.95) rotateZ(1.7deg);
+}
+
+/* Game-on Button */
+
+
+/* CSS to center the button under each card */
+.card-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.card-container a {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.card-container button {
+    margin-top: 10px;
+}
+
+button {
+    border-radius: 5px;
+    position: relative;
+    height: 50px;
+    padding: 0 30px;
+    border: 3px solid #b5e853;
+    background: #181818;
+    user-select: none;
+    white-space: nowrap;
+    transition: all .05s linear;
+    font-family: inherit;
+}
+
+button:before,
+button:after {
+    content: "";
+    position: absolute;
+    background: #181818;
+    transition: all .2s linear;
+}
+
+button:before {
+    width: calc(100% + 6px);
+    height: calc(100% - 16px);
+    top: 8px;
+    left: -3px;
+}
+
+button:after {
+    width: calc(100% - 16px);
+    height: calc(100% + 6px);
+    top: -3px;
+    left: 8px;
+}
+
+button:hover {
+    cursor: crosshair;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+button:hover:before {
+    height: calc(100% - 32px);
+    top: 16px;
+}
+
+button:hover:after {
+    width: calc(100% - 32px);
+    left: 16px;
+}
+
+button span {
+    font-size: 15px;
+    z-index: 3;
+    position: relative;
+    font-weight: 600;
+}
+
